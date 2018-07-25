@@ -1,3 +1,7 @@
+Updates 2.1.1(25-July-2018)
+
+- Github version
+
 Updates 2.1.0(07-July-2017)
 
 - Delete Function in Call Center
