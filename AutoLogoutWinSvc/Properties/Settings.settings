@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AutoLogoutWinSvc.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MasterKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">w46Ei61OlkaFiF9Sf58yTg</Value>
+    </Setting>
+    <Setting Name="Setting" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">D:\inetpub\wwwroot\WinServices\_LiveSites\RawData</Value>
+    </Setting>
+    <Setting Name="DataPort" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">18028</Value>
+    </Setting>
+    <Setting Name="ProjectName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ADS</Value>
+    </Setting>
+    <Setting Name="mConnStrMySQL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">server=localhost;uid=root;pwd=@mbul@nc3;database=ads;Charset=utf8;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

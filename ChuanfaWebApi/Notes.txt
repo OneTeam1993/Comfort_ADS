@@ -1,0 +1,13 @@
+﻿http://localhost/fms/Dashboard
+http://localhost/phpmyadmin
+http://localhost/adswebapi/api/assetinfo
+http://localhost/adswebapi/api/zoneinfo/
+http://localhost/adswebapi/api/companyinfo
+http://localhost/adswebapi/api/userinfo
+http://localhost/adswebapi/api/deviceinfo
+http://localhost/adswebapi/api/zonetypeinfo
+http://localhost/adswebapi/api/categoryinfo
+http://localhost/adswebapi/api/reportinfo
+http://localhost/adswebapi/api/roleinfo
+http://localhost/adswebapi/api/languageinfo
+http://localhost/adswebapi/api/eventinfo

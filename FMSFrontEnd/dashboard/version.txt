@@ -1,0 +1,49 @@
+Updates 2.0.7(13-March-2017)
+
+- Add two way trips
+- Add Time of call in reports and tables
+- Add SMS in markers
+- Adjust Pickup time 15 mins
+- Remove dollar sign in schedule jobs
+
+Updates 2.0.6(03-March-2017)
+
+- Improved Autorefresh in Call center map
+- Add Select Agent function in call center
+- Improver tables in call center
+- Add Assign by vehicle function
+- Remove assign driver function 
+- Add autocomplete functions in from & to forms
+
+Updates 2.0.5(16-December-2016)
+
+- Improved Autorefresh in Call center map
+- Reverse geocode in Postal code
+
+
+Updates 2.0.4(12-December-2016)
+
+- Bug Fix in Saving Date Issue
+- Bug Fix in Driver Logout
+- New downloadable user manual
+
+
+Updates 2.0.3(10-October-2016)
+
+- Show alert when no assigned vehicle in call center
+- Show alert when date is empty in call center
+- Show alert when date selected is invalid in creating new jobs
+- Show alert when date is empty in scheduled jobs
+- Show alert when date selected is invalid in creating scheduled jobs
+- Show alert when date is empty in job listing
+- Show alert when date selected is invalid in editing job listing
+- Add Nursing home option
+
+Updates 2.0.2(23-September-2016)
+
+- Bug Fix in adding & editing zones
+
+Updates 2.0.1(20-September-2016)
+
+- Add new hospital
+- Bug Fix Geocode for checking hospital

@@ -1,0 +1,13 @@
+﻿http://localhost/fms/Dashboard
+http://localhost/phpmyadmin
+http://localhost/comfortwebapi/api/assetinfo
+http://localhost/comfortwebapi/api/zoneinfo/
+http://localhost/comfortwebapi/api/companyinfo
+http://localhost/comfortwebapi/api/userinfo
+http://localhost/comfortwebapi/api/deviceinfo
+http://localhost/comfortwebapi/api/zonetypeinfo
+http://localhost/comfortwebapi/api/categoryinfo
+http://localhost/comfortwebapi/api/reportinfo
+http://localhost/comfortwebapi/api/roleinfo
+http://localhost/comfortwebapi/api/languageinfo
+http://localhost/comfortwebapi/api/eventinfo

@@ -1,0 +1,1012 @@
+﻿
+<!DOCTYPE html>
+<html lang="th" class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hospital & Nursing Home - Ambulance Dispatch System</title>
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+	<!--STYLESHEET-->
+	<!--=================================================-->
+
+	<!--Roboto Font [ OPTIONAL ]-->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300,500" rel="stylesheet" type="text/css">
+
+
+	<!--Bootstrap Stylesheet [ REQUIRED ]-->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	
+	<!--Content Page Stylesheet [ REQUIRED ]-->
+	<link href="css/content.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+
+    <!--Font Awesome [ OPTIONAL ]-->
+    <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	
+     <!--Animate.css [ OPTIONAL ]-->
+    <link href="plugins/animate-css/animate.min.css" rel="stylesheet">
+
+	<!--Switchery [ OPTIONAL ]-->
+	<link href="plugins/switchery/switchery.min.css" rel="stylesheet">
+
+
+    <!--Bootstrap Select [ OPTIONAL ]-->
+	<link href="plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+
+
+	<!--Bootstrap Tags Input [ OPTIONAL ]-->
+    <link href="plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+
+
+    <!--Chosen [ OPTIONAL ]-->
+    <link href="plugins/chosen/chosen.min.css" rel="stylesheet">
+	<!--Localization-->
+    <link rel="stylesheet" href="css/localization.css">
+
+
+    <!--noUiSlider [ OPTIONAL ]-->
+    <link href="plugins/noUiSlider/jquery.nouislider.min.css" rel="stylesheet">
+    <link href="plugins/noUiSlider/jquery.nouislider.pips.min.css" rel="stylesheet">
+
+
+
+
+
+	<!--Bootstrap Table [ OPTIONAL ]-->
+	<link href="plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+
+
+	<!--X-editable [ OPTIONAL ]-->
+	<link href="plugins/x-editable/css/bootstrap-editable.css" rel="stylesheet">
+
+
+	<!--Demo [ DEMONSTRATION ]-->
+	<link href="css/demo/nifty-demo.min.css" rel="stylesheet">
+
+
+	<!--SCRIPT-->
+	<!--=================================================-->
+
+	<!--Page Load Progress Bar [ OPTIONAL ]-->
+	<link href="plugins/pace/pace.min.css" rel="stylesheet">
+	<script src="plugins/pace/pace.min.js"></script>
+
+
+    <!-- Needs images, font... therefore can not be part of main.css -->
+    <link rel="stylesheet" href="fonts/themify-icons/themify-icons.min.css">
+    <link rel="stylesheet" href="fonts/weather-icons/css/weather-icons.min.css">
+    <!-- end Needs images -->
+
+	
+	<!--
+
+	REQUIRED
+	You must include this in your project.
+
+	RECOMMENDED
+	This category must be included but you may modify which plugins or components which should be included in your project.
+
+	OPTIONAL
+	Optional plugins. You may choose whether to include it in your project or not.
+
+	DEMONSTRATION
+	This is to be removed, used for demonstration purposes only. This category must not be included in your project.
+
+	SAMPLE
+	Some script samples which explain how to initialize plugins or components. This category should not be included in your project.
+
+
+	Detailed information and more samples can be found in the document.
+
+	-->
+	
+</head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+
+<body>
+    <!-- START OF CONTAINER -->
+	<div id="container" class="effect mainnav-lg navbar-fixed footer-fixed">
+		
+		<!--NAVBAR-->
+		<!--===================================================-->
+		<header id="navbar">
+			<div id="navbar-container" class="boxed">
+
+				<!--Brand logo & name-->
+				<!--================================-->
+				<div class="navbar-header">
+					<a href="index.html" class="navbar-brand">
+                        <!--Logo-->
+						<img src="img/logo.png" alt="TRACK Logo" class="brand-icon">
+                                  
+                            <div class="brand-title">
+                                <span style="color:#E31466;">Comfort Ambulance</span>
+						</div>
+					</a>
+				</div>
+				<!--================================-->
+				<!--End brand logo & name-->
+
+
+				<!--Navbar Dropdown-->
+				<!--================================-->
+				<div class="navbar-content clearfix">
+					<ul class="nav navbar-top-links pull-left">
+
+						<!--Navigation toogle button-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li class="tgl-menu-btn">
+							<a class="mainnav-toggle" href="#" title="Toggle Navigation Menu">
+								<i class="fa fa-navicon fa-lg"></i>
+							</a>
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End Navigation toogle button-->
+
+							<!--Language-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li class="dropdown hidden-xs hidden-sm hidden-md hidden-lg">
+                            <label class="localize localization">
+                                <select id="load-lang" class="icon-menu" onchange="document.documentElement.lang=this.value">
+                                    <option style="background-image:url(img/flags/thailand.png);" value="th" selected="selected">Thai</option>
+                                    <option style="background-image:url(img/flags/united-kingdom.png);" value="en">English</option>
+                                </select>
+                            </label>
+                        </li>
+
+                        <!--Language-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+						<!--History-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--Start History-->
+
+                        <li class="historyreport">
+                            <a href="history.html" title="History">
+                                <i class="fa fa-calendar-o fa-lg"></i>
+                                <span class="menu-title">
+                                    &nbsp;
+                                    <!--Notifications-->
+                                    <span data-l11n="th" class="pull-right badge badge-primary">ประวัติศาสตร์ รายงาน</span>
+                                    <span data-l11n class="pull-right badge badge-primary">History Report</span>
+
+                                </span>
+                            </a>
+                        </li>
+
+                        <!--End History-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+
+
+
+					</ul>
+					<ul class="nav navbar-top-links pull-right">
+
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--Vehicle List-->
+
+
+
+						<!--User dropdown-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li id="dropdown-user" class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle text-right" title="Profile">
+								<span class="pull-right">
+									<img class="img-circle img-user media-object" src="img/av1.png" alt="Profile Picture" id="showProfile">
+								</span>
+								<div class="username hidden-xs" id="load-username"></div>
+							</a>
+
+
+							<div class="dropdown-menu dropdown-menu-md dropdown-menu-right with-arrow panel-default">
+
+								<!-- Dropdown heading  -->
+								<div class="pad-all bord-btm">
+									<p class="text-lg text-muted text-thin mar-btm" id="load-email"></p>
+									<div class="progress progress-sm">
+										<div class="progress-bar" style="width: 100%;">
+											<span class="sr-only">70%</span>
+										</div>
+									</div>
+								</div>
+
+
+								<!-- User dropdown menu -->
+								<ul class="head-list">
+                                    <li data-l11n="th">
+                                        <a href="profile.html">
+                                            <i class="fa fa-user fa-fw fa-lg"></i> ข้อมูลส่วนตัว
+                                        </a>
+
+                                    </li>
+
+                                    <li data-l11n>
+                                        <a  href="profile.html">
+                                            <i class="fa fa-user fa-fw fa-lg"></i> Profile
+                                        </a>
+
+                                    </li>
+
+                                    <li data-l11n="th">
+                                        <a href="faq.html">
+                                            <i class="fa fa-question-circle fa-fw fa-lg"></i> ช่วย
+                                        </a>
+                                    </li>
+
+                                    <li data-l11n>
+                                        <a href="faq.html">
+                                            <i class="fa fa-question-circle fa-fw fa-lg"></i> Help
+                                        </a>
+                                    </li>
+
+                                    
+                                </ul>
+
+                                <!-- Dropdown footer -->
+                                <div class="pad-all text-right hidden-sm hidden-md hidden-lg">
+                                    <span data-l11n="th" class="btn btn-primary" data-target="#sm-modal" data-toggle="modal">
+                                        <i class="fa fa-sign-out fa-fw"></i> ออกจากระบบ
+                                    </span>
+
+                                    <span data-l11n class="btn btn-primary" data-target="#sm-modal" data-toggle="modal">
+                                        <i class="fa fa-sign-out fa-fw"></i> Logout
+                                    </span>
+
+                                </div>
+
+
+
+                            </div>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End user dropdown-->
+							<li data-content="Logout">
+
+                            <a class="lang-selector dropdown-toggle hidden-xs" href="#" data-target="#sm-modal" data-toggle="modal">
+                                <span class="lang-selected hidden-xs">
+                                    <!--<img class="lang-flag" src="img/vechlist.png" alt="Vehicle Lists">-->
+                                    <span data-l11n="th" class="lang-name hidden-xs"><i class="fa fa-sign-out fa-lg" title="ออกจากระบบ"></i></span>
+                                    <span data-l11n class="lang-name hidden-xs"><i class="fa fa-sign-out  fa-lg" title="Logout"></i></span>
+
+                                </span>
+                            </a>
+
+                        </li>
+
+
+					</ul>
+				</div>
+				<!--================================-->
+				<!--End Navbar Dropdown-->
+
+			</div>
+		</header>
+		<!--===================================================-->
+		<!--END NAVBAR-->
+
+		<div class="boxed">
+
+			<!--CONTENT CONTAINER-->
+			<!--===================================================-->
+			<div id="content-container">
+				
+
+				<!--Page Title-->
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<!--<div id="page-title">-->
+
+
+				<!--Page content-->
+				<!--===================================================-->
+                 <div id="page-content">
+
+                   
+                        
+                            <div class="panel-body-full">
+                        
+                                <div class="panel panel-bordered panel-dark">
+                                    <div class="panel-heading" style="background-color: #1B1B1B">
+                                        <h4 data-l11n class="panel-title"><i class="fa fa-hospital-o"></i>&nbsp;Hospital & Nursing Home&nbsp;<span class="badge badge-success" id="total-hospital"></span></h4>
+
+                                    </div>
+                                    <div class="panel-body" style="background-color: #2A2F35">
+
+                                        <div id="custom-hospital">
+                                            <div class="form-inline" role="form">
+
+
+                                            </div>
+                                        </div>
+                                        <table id="hospital-editable"
+										       class="searchable table-striped"
+                                               data-height="400"
+                                               data-click-to-select="false"
+                                               data-single-select="true"                                 
+                                               data-toolbar="#custom-hospital"
+                                               data-show-header="true"
+                                               data-show-export="false"
+                                               data-search="true"
+                                               data-show-refresh="true"
+                                               data-show-toggle="true"
+                                               data-show-columns="true"
+                                               data-page-list="[10, 25, 50, 100, All]"
+                                               data-page-size="10"
+                                               data-pagination="true" data-show-pagination-switch="false"></table>
+
+                                        <div class="pull-left">
+                                            <button data-l11n id="hospital-confirm-deleteEN" class="btn btn-danger btn-labeled fa fa-times" title="Delete Record" disabled="">Delete</button>&nbsp;
+                                        </div>
+                                        <div id="toggle-aside" class="pull-left">
+                                            <button data-l11n class="hidden-xs btn btn-mint btn-labeled fa fa-hospital-o add-hospital" title="Add Record">Add Hospital/Nursing Home</button>
+                                        </div>
+
+                                        <div id="toggle-aside2" class="pull-left">
+                                            <button data-l11n class="btn btn-mint btn-labeled fa fa-hospital-o edit-resellerEN" title="Edit Record">Edit Hospital/Nursing Home</button>
+                                        </div>
+
+                                        <button data-l11n class="btn btn-mint btn-labeled fa fa-file-word-o pull-right hidden-xs hidden-md" title="Export to Word" id="HospitalExportWordEN">MS Word</button>
+                                        <button data-l11n class="btn btn-mint btn-labeled fa fa-file-pdf-o pull-right" title="Export to PDF" id="HospitalExportPDFEN">PDF</button>
+                                        <button data-l11n class="hidden-xs btn btn-mint btn-labeled fa fa-file-excel-o pull-right" title="Export to Excel" id="HospitalExportExcelEN">Excel</button>
+
+                                    </div>
+
+                                </div>
+
+			
+				</div>
+
+	   			<!--===================================================-->
+				
+	            <!--End page content-->
+				<!--===================================================-->
+				<!--END CONTENT CONTAINER-->
+                </div>
+
+
+
+
+
+
+            </div>
+  			<!--===================================================-->
+            <!--END CONTENT CONTAINER-->
+
+			
+			<!--MAIN NAVIGATION-->
+			<!--===================================================-->
+			<nav id="mainnav-container" style="position:fixed">
+				<div id="mainnav">
+
+
+
+
+					<!--Menu-->
+					<!--================================-->
+					<div id="mainnav-menu-wrap">
+						<div class="nano">
+							<div class="nano-content">
+								<ul id="mainnav-menu" class="list-group">
+						
+                                    <!--Version-->
+                                    <li data-l11n="th" class="list-header">TRACK รุ่น&nbsp;<span id="verNum" class="text-muted"></span></li>
+
+                                    <li data-l11n class="list-header">ADS Version&nbsp;<span id="verNumEN" class="text-muted"></span></li>
+
+                                    <!--Dashboard-->
+                                    <li class="dashboard">
+                                        <a href="index.html">
+                                            <i class="fa fa-dashboard fa-lg"></i>
+                                            <span class="menu-title">
+                                                <strong data-l11n="th">หน้าปัด</strong>
+                                                <strong data-l11n>Dashboard</strong>
+                                                <!--Notifications-->
+                                                 <span data-l11n="th" class="label label-primary pull-right">แผนที่</span>
+                                                <span data-l11n class="label label-primary pull-right">Map</span>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="callcenter">
+                                        <a href="call_center.html">
+                                            <i class="fa fa-phone fa-lg"></i>
+                                            <span class="menu-title">
+                                                <strong data-l11n="th">ศูนย์รับแจ้ง</strong>
+                                                <strong data-l11n>Call Center</strong>
+                                            </span>
+
+                                        </a>
+                                    </li>
+
+									<li class="drivers">
+                                        <a href="drivers.html">
+                                            <i class="fa fa-user-plus fa-lg"></i>
+                                            <span class="menu-title">
+                                                <strong data-l11n="th">ไดร์เวอร์</strong>
+                                                <strong data-l11n>Drivers</strong>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <!--Vehicles-->
+                                    <li>
+                                        <a href="vehicles.html">
+                                            <i class="fa fa-truck fa-lg"></i>
+                                            <span class="menu-title">
+                                                <strong data-l11n="th">ยานพาหนะ</strong>
+                                                <strong data-l11n>Vehicles</strong>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <!--Zones-->
+                                    <li>
+                                        <a href="zones.html">
+                                            <i class="fa fa-globe fa-lg"></i>
+                                             <span class="menu-title">
+                                                <strong data-l11n="th">โซน</strong>
+                                                <strong data-l11n>Zones</strong>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="jobs">
+                                        <a href="jobs.html">
+                                            <i class="fa fa-exchange fa-lg"></i>
+                                            <span class="menu-title">
+                                                <strong data-l11n="th">โซน</strong>
+                                                <strong data-l11n>Advance Booking</strong>
+                                            </span>
+
+                                        </a>
+                                    </li>
+
+                                    <li class="hospital active-link">
+                                        <a href="hospital.html">
+                                            <i class="fa fa-hospital-o fa-lg"></i>
+                                            <span class="menu-title">
+                                                <strong data-l11n="th">โซน</strong>
+                                                <strong data-l11n>Hospital & Nursing Home</strong>
+                                            </span>
+
+                                        </a>
+                                    </li>
+
+
+                                    <!--Settings-->
+                                    <!--<li class="list-header">Settings</li>-->
+                                    <!--Submenu-->
+
+                                    <li class="list-divider"></li>
+
+                                    <li data-l11n="th" class="settings">
+                                        <a href="#" title="การตั้งค่า">
+                                            <i class="fa fa-gears fa-lg"></i>
+                                            <span data-l11n="th" class="menu-title">การตั้งค่า</span>
+
+
+                                            <i class="fa arrow"></i>
+                                        </a>
+
+                                        <ul class="collapse">
+
+                                            <!--Companies-->
+                                             <li class="company">
+                                                <a href="companies.html" title="Companies Page">
+                                                    <i class="fa fa-building-o fa-lg"></i>
+                                                    <span data-l11n="th" class="menu-title">บริษัท</span>
+
+                                                </a>
+                                            </li>
+
+                                            <!--Users-->
+                                            <li class="users">
+                                                <a href="users.html" title="Users Page">
+                                                    <i class="fa fa-users fa-lg"></i>
+                                                    <span data-l11n="th" class="menu-title">ผู้ใช้</span>
+
+                                                </a>
+                                            </li>
+
+
+                                            <!--Device-->
+                                            <li class="devices">
+                                                <a href="devices.html" title="Devices Page">
+                                                    <i class="fa fa-tablet fa-lg"></i>
+                                                    <span data-l11n="th" class="menu-title">อุปกรณ์</span>
+
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="reseller">
+                                                <a href="reseller.html" title="Reseller Page">
+                                                    <i class="fa fa-user-secret fa-lg"></i>
+                                                    <span data-l11n="th" class="menu-title">ผู้ค้าปลีก</span>
+
+                                                </a>
+                                            </li>
+
+                                        </ul>
+
+                                    </li>
+
+                                    <li data-l11n class="settings">
+                                        <a href="#" title="Settings">
+                                            <i class="fa fa-gears fa-lg"></i>
+
+                                            <span data-l11n class="menu-title">Settings</span>
+
+
+                                            <i class="fa arrow"></i>
+                                        </a>
+
+                                        <ul class="collapse">
+
+                                            <!--Companies-->
+                                            <li class="company">
+                                                <a href="companies.html" title="Companies Page">
+                                                    <i class="fa fa-building-o fa-lg"></i>
+
+                                                    <span data-l11n class="menu-title">Companies</span>
+
+                                                </a>
+                                            </li>
+
+                                            <!--Users-->
+                                            <li class="users">
+                                                <a href="users.html" title="Users Page">
+                                                    <i class="fa fa-users fa-lg"></i>
+
+                                                    <span data-l11n class="menu-title">Users</span>
+
+                                                </a>
+                                            </li>
+
+
+                                            <!--Device-->
+                                            <li class="devices">
+                                                <a href="devices.html" title="Devices Page">
+                                                    <i class="fa fa-tablet fa-lg"></i>
+
+                                                    <span data-l11n class="menu-title">Devices</span>
+                                                </a>
+                                            </li>
+
+                                            <li class="reseller active-link">
+                                                <a href="reseller.html" title="Reseller Page">
+                                                    <i class="fa fa-user-secret fa-lg"></i>
+
+                                                    <span data-l11n class="menu-title">Reseller</span>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+
+                                    </li>
+									</ul>							
+							</div>
+						</div>
+					</div>
+					<!--================================-->
+					<!--End menu-->
+
+				</div>
+			</nav>
+			<!--===================================================-->
+			<!--END MAIN NAVIGATION-->
+			
+			<!--ASIDE-->
+			<!--===================================================-->
+            <aside id="aside-container" style="position:fixed">
+                <div id="aside">
+                    <div class="nano">
+                        <div class="nano-content">
+
+                            <!--Forms-->
+                            <form id="bv-wz-form" class="form-horizontal" enctype="multipart/form-data" method="post">
+
+                                <!-- Main Form Wizard -->
+                                <!--===================================================-->
+
+
+
+                                <div class="panel-body">
+                                    <div class="tab-content">
+
+                                        <!--First tab-->
+                                        <div class="tab-pane fade in active" id="hospital-list">
+
+                                            <div class="form-group hidden-xs hidden-sm hidden-md hidden-lg">
+                                                <input type="text" class="form-control" placeholder="Enter Hospital ID" id="hospitalID" name="hospitalID">
+                                                <small class="text-muted">Hospital ID</small>
+                                            </div>
+
+
+                                            <br />
+
+                                            <p />
+                                            <!--===================================================-->
+                                            <!--===================================================-->
+                                            <!--Name-->
+                                            <div class="form-group">
+                                                <input data-l11n type="text" class="form-control" placeholder="Hospital/Nursing Home Name" name="hospitalName" id="hospitalName" data-by-field="hospitalName">
+                                                <small data-l11n class="text-muted">Hospital/Nursing Home Name</small>
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <input data-l11n type="text" class="form-control" placeholder="Address" name="hospitalAddress" id="hospitalAddress" data-by-field="hospitalAddress">
+                                                <small data-l11n class="text-muted">Address</small>
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <input data-l11n type="text" class="form-control" placeholder="Short Name" name="hospitalSN" id="hospitalSN" data-by-field="hospitalSN">
+                                                <small data-l11n class="text-muted">Short Name</small>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select title="Select Hospital/Nursing Home..." style="display: none;" class="selectpicker" data-live-search="true" data-width="100%" data-style="btn-asiacomDropdown" id="category">
+                                                    <option value="1" data-icon="">Hospital</option>
+                                                    <option value="2" data-icon="">Nursing Home</option>
+                                                </select>
+                                                <small class="text-muted">Category</small>
+                                            </div>
+
+
+                                            <!--===================================================-->
+
+
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+
+                                <!--Footer button-->
+
+                                <div data-l11n class="pull-right">
+
+
+                                    <button id="submit-hospital" class="btn btn-success btn-labeled fa fa-check finish" title="Submit">Submit</button>
+
+                                </div>
+
+
+
+                                <!--===================================================-->
+                                <!-- End of Main Form Wizard -->
+
+
+
+
+
+
+
+                            </form>
+
+                        </div>
+                                <!--===================================================-->
+                                <!-- End of Main Form Wizard -->
+
+
+                        
+
+
+
+
+                       
+
+                        </div>
+                    </div>
+
+
+
+                    <!--===================================================-->
+                    <!--END ASIDE-->
+
+                </aside>
+
+         
+
+		<!-- FOOTER -->
+		<!--===================================================-->
+		 <footer id="footer">
+
+            <!-- Visible when footer positions are fixed -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="show-fixed pull-right">
+                <ul class="footer-list list-inline">
+
+                    
+                    
+                    <!--===================================================-->
+                    <!-- Server Clock Start-->
+
+                        <li>
+                            <i class="fa fa-clock-o">&nbsp;</i> <div class="show-fixed pull-right pad-rgt" id="clockbox" title="Current Time"></div>                       
+                        </li>
+                    <!-- Server Clock End -->
+                    <!--===================================================-->
+
+
+                </ul>
+                
+            </div>
+
+        
+
+
+            <!-- Visible when footer positions are static -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="show-fixed pull-right pad-rgt"></div>
+
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Remove the class name "show-fixed" and "hide-fixed" to make the content always appears. -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+           <span data-l11n="th" class="pad-lft hidden-xs hidden-md"><span id="software"></span>&nbsp;&#0169; 2015 - ระบบการจัดการ กองทัพเรือ</span>
+           <span data-l11n class="pad-lft hidden-xs hidden-md"><span id="softwareEN"></span>&nbsp;&#0169; 2016 - Ambulance Dispatch System</span>
+          
+
+
+
+        </footer>       
+		<!--===================================================-->
+		<!-- END FOOTER -->
+
+
+		<!-- SCROLL TOP BUTTON -->
+		<!--===================================================-->
+		<button id="scroll-top" class="btn"><i class="fa fa-chevron-up"></i></button>
+		<!--===================================================-->
+
+
+
+	</div>
+	<!--===================================================-->
+	<!-- END OF CONTAINER -->
+
+
+        <!-- BOOTSTRAP MODALS-->
+        <!--====================================================-->
+        <!--Default Bootstrap Modal-->
+        <!--===================================================-->
+        <div class="modal fade" id="default-modal" role="dialog" tabindex="-1" aria-labelledby="default-modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!--Modal header-->
+                    <div class="modal-header">
+                        <button data-dismiss="modal" class="close" type="button">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Modal Heading</h4>
+                    </div>
+
+                    <!--Modal body-->
+                    <div class="modal-body">
+                        <h4 class="text-thin">Bootstrap Modal Vertical Alignment Center</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        <hr>
+                        <h4 class="text-thin">Popover in a modal</h4>
+                        <p>
+                            This
+                            <button class="btn btn-sm btn-warning modal-popover add-popover" data-toggle="popover" data-trigger="focus" data-content="And here\'s some amazing content. It\'s very engaging. right?" data-original-title="Popover Title">button</button>
+                            should trigger a popover on click.
+                        </p>
+                        <hr>
+                        <h4 class="text-thin">Tooltips in a modal</h4>
+                        <p>
+                            <a class="btn-link add-tooltip" href="#" data-original-title="Tooltip">This link</a> and
+                            <a class="btn-link add-tooltip" href="#" data-original-title="Tooltip">that link</a> should have tooltips on hover.
+                        </p>
+                    </div>
+
+                    <!--Modal footer-->
+                    <div class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+                        <button class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--===================================================-->
+        <!--End Default Bootstrap Modal-->
+        <!--Logout Small Bootstrap Modal-->
+        <!--===================================================-->
+        <div id="sm-modal" class="modal fade" tabindex="-1" style="color: #1C2126">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                        <div data-l11n="th" class=".text-normal"><i class="fa fa-warning fa-lg">&nbsp;&nbsp;ระบบการ จัดส่ง รถพยาบาล</i></div>
+                        <div data-l11n class=".text-normal"><i class="fa fa-warning fa-lg">&nbsp;&nbsp;Ambulance Dispatch System</i></div>
+                    </div>
+                    <div class="modal-body">
+                        <p data-l11n="th" class=".text-normal">ดำเนินการ ออกจากระบบ ?</p>
+                        <p data-l11n class=".text-normal">Proceed to Logout?</p>
+                        <button data-l11n="th" type="submit" class="btn btn-success btn-labeled fa fa-check fa-lg pull-right" title="Submit" onclick="Logout();" id="clickLogout">ตกลง</button>
+                        <button data-l11n type="submit" class="btn btn-success btn-labeled fa fa-check fa-lg pull-right" title="Submit" onclick="LogoutEN();" id="clickLogoutEN">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--===================================================-->
+        <!-- Logout End Small Bootstrap Modal-->
+
+	
+	<!--JAVASCRIPT-->
+	<!--=================================================-->
+
+	<!--jQuery [ REQUIRED ]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	
+
+    <!--custom Javascript by King-->
+    <script src="js/load-hospital.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/export.js"></script>
+	<script src="js/profile.js"></script>
+    <script src="js/modal-forms.js"></script>
+
+	<!--BootstrapJS [ RECOMMENDED ]-->
+	<script src="js/bootstrap.min.js"></script>
+
+
+    <!--Fast Click [ OPTIONAL ]-->
+	<script src="plugins/fast-click/fastclick.min.js"></script>
+
+	
+    <!--Demo script [ DEMONSTRATION ]-->
+	<script src="js/demo/nifty-demo.min.js"></script>
+	
+
+	<!-- Plugins [ OPTIONAL ]-->
+	<!--<script src="js/plugins.min.js"></script>-->
+    <script src="js/nifty.min.js"></script>
+	
+
+
+   <!-- Switchery [ OPTIONAL ]-->
+   <script src="plugins/switchery/switchery.min.js"></script>
+
+
+	<!--Bootstrap Select [ OPTIONAL ]-->
+	<script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
+
+
+    <!--Bootstrap Tags Input [ OPTIONAL ]-->
+    <script src="plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+
+
+    <!--Chosen [ OPTIONAL ]-->
+    <script src="plugins/chosen/chosen.jquery.min.js"></script>
+
+
+    <!--noUiSlider [ OPTIONAL ]-->
+    <script src="plugins/noUiSlider/jquery.nouislider.all.min.js"></script>
+
+
+    <!--Bootstrap Timepicker [ OPTIONAL ]-->
+    <!--<script src="plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>-->
+
+
+    <!--Bootstrap Datepicker [ OPTIONAL ]-->
+    <script src="plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+
+
+    <!--Dropzone [ OPTIONAL ]-->
+    <script src="plugins/dropzone/dropzone.min.js"></script>
+
+
+    <!--Summernote [ OPTIONAL ]-->
+    <!--<script src="plugins/summernote/summernote.min.js"></script>-->
+	<!--X-editable [ OPTIONAL ]-->
+	<!--<script src="plugins/x-editable/js/bootstrap-editable.min.js"></script>-->
+
+
+	<!--Bootstrap Table [ OPTIONAL ]-->
+	<script src="plugins/bootstrap-table/bootstrap-table.min.js"></script>
+
+
+	<!--Bootstrap Table Extension [ OPTIONAL ]-->
+	<script src="plugins/bootstrap-table/extensions/editable/bootstrap-table-editable.js"></script>
+
+
+
+    <!--Panel [ SAMPLE ]-->
+	<!--<script src="js/demo/ui-panels.js"></script>-->
+
+	
+	<!--Server Time Clock [ OPTIONAL ]-->
+    <script src="js/servertime.js"></script>
+
+
+    <!--Download Plugins [ OPTIONAL ]-->
+
+    <script src="plugins/table-export/tableExport.min.js"></script> <!--@*Main file which does export feature *@-->
+    <script src="plugins/table-export/libs/FileSaver/FileSaver.min.js"></script>
+    <script src="plugins/table-export/libs/html2canvas/html2canvas.min.js"></script>
+    <script src="plugins/table-export/libs/jsPDF/jspdf.min.js"></script>
+    <script src="plugins/table-export/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
+
+
+    <!--Bootbox Modals [ OPTIONAL ]-->
+    <script src="plugins/bootbox/bootbox.min.js"></script>
+
+
+    <!--Modals [ OPTIONAL ]-->
+    <script src="js/ui-modals.js"></script>
+
+
+    <!--Bootstrap Validator [ OPTIONAL ]-->
+    <script src="plugins/bootstrap-validator/bootstrapValidator.min.js"></script>
+
+
+    <!--Masked Input [ OPTIONAL ]-->
+    <script src="plugins/masked-input/jquery.maskedinput.min.js"></script>
+
+
+    <!--Form validation [ OPTIONAL ]-->
+    <!--<script src="js/form-validation.js"></script>-->	
+
+	<!--Modernizr  [ OPTIONAL ]-->
+        <script src="plugins/modernizr/modernizr.custom.js"></script>
+
+
+   <!--Bootstrap Wizard [ OPTIONAL ]-->
+   <script src="plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+
+
+   <!--Form Wizard [ OPTIONAL ]-->
+      <script src="js/form-wizard.js"></script>
+        <!--<script src="js/form-validation.js"></script>-->
+
+
+   <!--Datetime Picker [ OPTIONAL ]-->
+   <script src="plugins/datetimepicker/jquery.datetimepicker.js"></script>
+
+
+
+   <!--Date Format-->
+   <script src="plugins/moment/moment.js"></script>
+   <script src="plugins/moment-timezone/moment-timezone.js"></script>
+   <script src="plugins/moment-timezone/moment-timezone-with-data.js"></script>
+	<script src="plugins/mobile-detect/mobile-detect.js"></script>
+	<!--
+
+	REQUIRED
+	You must include this in your project.
+
+	RECOMMENDED
+	This category must be included but you may modify which plugins or components which should be included in your project.
+
+	OPTIONAL
+	Optional plugins. You may choose whether to include it in your project or not.
+
+	DEMONSTRATION
+	This is to be removed, used for demonstration purposes only. This category must not be included in your project.
+
+	SAMPLE
+	Some script samples which explain how to initialize plugins or components. This category should not be included in your project.
+
+
+	Detailed information and more samples can be found in the document.
+
+	-->
+
+
+</body>
+</html>
+

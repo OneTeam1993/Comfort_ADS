@@ -1,0 +1,13 @@
+﻿http://103.237.168.119/fms/Dashboard
+http://103.237.168.119/phpmyadmin
+http://103.237.168.119/adswebapi/api/assetinfo
+http://103.237.168.119/adswebapi/api/zoneinfo/
+http://103.237.168.119/adswebapi/api/companyinfo
+http://103.237.168.119/adswebapi/api/userinfo
+http://103.237.168.119/adswebapi/api/deviceinfo
+http://103.237.168.119/adswebapi/api/zonetypeinfo
+http://103.237.168.119/adswebapi/api/categoryinfo
+http://103.237.168.119/adswebapi/api/reportinfo
+http://103.237.168.119/adswebapi/api/roleinfo
+http://103.237.168.119/adswebapi/api/languageinfo
+http://103.237.168.119/adswebapi/api/eventinfo
